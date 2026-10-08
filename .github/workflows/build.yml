@@ -31,12 +31,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. 安装 JDK 17（Gradle 9.5.1 需以 17+ 运行，构建目标也是 Java 17）
-      - name: Set up JDK 17
+      # 2. 安装 JDK 21
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: '21'
           cache: gradle
 
       # 3. 补充缓存 Gradle 依赖，加速重复构建
